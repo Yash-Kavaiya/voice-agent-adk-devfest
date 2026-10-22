@@ -1,0 +1,21 @@
+name: "devfest-agent"
+acli_version: "1.11.0"
+agent_directory: "app"
+region: 'us-east1'
+base_template: "adk"
+generated_at: "2026-10-22T13:09:08.212269+00:00"
+language: "python"
+framework: "google-adk"
+create_params:
+  # The ADK name of the root agent, as rendered into the agent source. Rename
+  # the agent and you must change it in both places: telemetry reports this as
+  # gen_ai.agent.name, and it is what agents-cli reports for the project.
+  root_agent_name: "devfest_agent"
+  deployment_target: "agent_runtime"
+  session_type: "in_memory"
+  cicd_runner: "github_actions"
+  is_a2a: false
+  agent_gateway: false
+  agent_guidance_filename: "GEMINI.md"
+  agent_runtime:
+    identity_default: "agent_identity"
